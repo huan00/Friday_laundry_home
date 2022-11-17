@@ -76,6 +76,11 @@ nav {
   position: relative;
 }
 
+.business-client a {
+  text-decoration: none;
+  color: black;
+}
+
 .business-client .business-client-tooltip {
   visibility: hidden;
   width: 120px;
@@ -87,6 +92,7 @@ nav {
 
   position: absolute;
   left: 50%;
+  top: 50%;
   z-index: 1;
 }
 
