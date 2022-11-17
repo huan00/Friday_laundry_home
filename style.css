@@ -72,6 +72,26 @@ nav {
 
 .business-client {
   text-align: right;
+
+  position: relative;
+}
+
+.business-client .business-client-tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+
+.business-client:hover .business-client-tooltip {
+  visibility: visible;
 }
 
 main {
@@ -201,7 +221,7 @@ footer {
 #cursor-trail {
   width: 100px;
   aspect-ratio: 1/1;
-  background: rgba(0, 255, 0, .5);
+  background: rgba(160, 236, 209, .5);
   position:absolute;
   border-radius: 180px;
   filter: blur(50px);
