@@ -295,6 +295,10 @@ footer {
     bottom: -100px;
     font-size: 10px;
   }
+
+  .product-list ul {
+    width: 100%;
+  }
   .product-list ul li{
     font-size: 10px;
   }
