@@ -86,7 +86,7 @@ nav {
 
 .business-client .business-client-tooltip {
   visibility: visible;
-  width: 120px;
+  width: fit-content;
   background-color: black;
   color: #fff;
   text-align: center;
