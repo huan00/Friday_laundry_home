@@ -245,10 +245,13 @@ footer {
   }
 
   body {
-    width: 390px;
+    width: 100vw;
+    height: 100vh;
   }
 
   .container {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
@@ -289,10 +292,10 @@ footer {
 
   footer {
     position: absolute;
-    bottom: 0;
+    bottom: -100px;
     font-size: 10px;
   }
-  .product-list ul{
-    font-size: 5px;
+  .product-list ul li{
+    font-size: 10px;
   }
 }
