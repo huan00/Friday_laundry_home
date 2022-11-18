@@ -99,6 +99,11 @@ nav {
   z-index: 1;
 }
 
+.business-client-tooltip ul {
+  text-decoration: none;
+  text-align: left;
+}
+
 /* .business-client:hover .business-client-tooltip {
   visibility: visible;
 } */
