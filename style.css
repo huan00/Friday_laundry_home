@@ -94,7 +94,7 @@ nav {
   padding: 5px;
 
   position: absolute;
-  left: 50%;
+  right: 0;
   top: 50%;
   z-index: 1;
 }
