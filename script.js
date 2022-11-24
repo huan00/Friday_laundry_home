@@ -1,5 +1,5 @@
 const cursor_trail = document.getElementById('cursor-trail')
-const container = document.getElementById('container')
+const container = document.getElementById('hero')
 
 window.addEventListener('mouseover', (e) => {
   const x = e.clientX + 'px'

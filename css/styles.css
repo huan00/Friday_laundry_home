@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  cursor: url('/assets/square2.png'), auto;
+}
+
+/* Navbar */
+.navbar {
+  font-size: 14px;
+  height: 150px;
+}
+
+.navbar .container {
+  align-items: start;
+  padding-top: 20px;
+}
+
+.navbar .grid {
+  overflow: visible;
+}
+
+.navbar-bus-info {
+  justify-self: start;
+}
+
+.navbar-logo {
+  width: 30px;
+  aspect-ratio: 1;
+  border: 1px solid #333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar-bus-desc {
+  grid-column: 2 / 4;
+  width: 80%;
+  
+  justify-self: center;
+  text-indent: 4rem;
+  text-align: justify;
+}
+
+.navbar-bus-client {
+  justify-self: end;
+}
+
+/* Hero */
+
+.hero {
+  overflow: auto;
+}
+
+.hero .container {
+  overflow: hidden;
+  height: 700px;
+  position: relative;
+}
+
+.title-name {
+  position: absolute;
+  font-size: 42px;
+}
+
+.title-name span {
+  font-weight: bold;
+}
+
+#outer-orbit {
+  width: 30%;
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
+
+  border: 1px solid black;
+  border-radius: 50%;
+  z-index: 100;
+  
+  position: absolute;
+  transform: translate(0, 0) rotate(55deg) skewY(-20deg);
+}
+
+#inner-orbit {
+  z-index: 100;
+
+  width: 30%;
+  aspect-ratio: 1 / 2;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+
+  transform: translate(0, 0) rotate(90deg) skewY(20deg);
+  overflow: visible;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+footer .grid {
+  grid-template-columns: 1fr 4fr;
+}
+
+.spin-labs {
+  justify-self: flex-start;
+}
+
+.spin-labs-circle {
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #333;
+  position: relative;
+}
+
+.spin-labs-line {
+  width: 50%;
+  height: 1px;
+  background-color: #FFF;
+  
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  transform: rotate(-45deg);
+}
+
+.product-list ul {
+  list-style-type: '\2014';
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.product-list ul li {
+  width: fit-content;
+  padding-left: 4px;
+  margin: 0 10px;
+}
+
+.product-list ul li:first-child {
+  list-style-type: none;
+}
+
+/* Utilities */
+
+.container {
+  
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: auto;
+
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#cursor-trail {
+  width: 100px;
+  aspect-ratio: 1/1;
+  background: rgba(160, 236, 209, .5);
+  position:absolute;
+  border-radius: 180px;
+  filter: blur(50px);
+  transition: .5s;
+}
+
+@media(max-width: 768px){
+  .navbar .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .navbar-bus-desc {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+}
+
+@media(max-width: 500px){
+  .navbar-bus-desc {
+    font-size: 8px;
+  }
+
+  .hero .container {
+    height: 300px;
+  }
+
+  .title-name {
+    font-size: 1rem;
+  }
+
+  /* footer */
+
+  footer .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+  }
+
+  footer .container {
+    justify-content: center;
+  }
+
+  .spin-labs {
+    justify-self: center;
+  }
+
+  .product-list ul{
+    font-size: .5rem;
+    line-height: 14px;
+  }
+}
+
+
+/* margin */
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+/* Text sizes */
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}

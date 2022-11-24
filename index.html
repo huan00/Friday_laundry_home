@@ -5,80 +5,88 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src='/script.js' defer></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   
   <title>Document</title>
 </head>
 <body>
-  <div class="container" id="container">
-    <nav>
-      <div class="business-info">
-        <div class="logo-container">
-          <div class="logo">
-            <p>Fl</p>
-          </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container grid">
+      <div class="navbar-bus-info flex">
+        <div class="navbar-logo text-center">
+            Fl
         </div>
-        <div>
-          <div class="business-contact">
-            <p>hello@fridaylaundry.com</p>
-            <p>M&#8212;S (( off some hours</p>
-          </div>
+        <div class="navbar-bus-contact">
+          <p>hello@fridaylaundry.com</p>
+          <p>M&#8212;S (( off some hours</p>
         </div>
       </div>
 
-      <div class="business-desc">
+      <div class="navbar-bus-desc">
         <p>A design studio that gives form to new ideas. With so much information out there, audiences have to work hard to unscramble what's important. We help brands communicate effectively with order and clarity.</p>
       </div>
-      <div class="business-client">
+
+      <div class="navbar-bus-client">
         <a href="">
           <p>Clients</p>
         </a>
-        <div class="business-client-tooltip">
+
+        <div class="navbar-bus-client-tooltip">
           <ul>
             <li>Pink Moon</li>
             <li>Rho</li>
           </ul>
-          
         </div>
       </div>
-    </nav>
-    <main>
+    </div>
+  </div>
 
-        <div id="outer-orbit"></div>
-        <div id="inner-orbit"></div>
-   
-      
-      <div class="title">
+
+
+
+  <section class="hero">
+    <div class="container flex">
+
+      <div class="title-name text-center">
         <p><span>Friday</span> Laundry</p>
       </div>
-    </main>
+      <div id="outer-orbit"></div>
+      <div id="inner-orbit"></div>
+    </div>
+</section>
+
+
     <footer>
-      <div class="spin-labs">
-        <div class="spin-labs-circle">
-          <div class="spin-labs-line"></div>
+      <div class="container grid">
+
+        <div class="spin-labs flex">
+          <div class="spin-labs-circle">
+            <div class="spin-labs-line"></div>
+          </div>
+          <div>
+            Spin Labs
+          </div>
         </div>
-        <div>
-          Spin Labs
+        <div class="product-list">
+          <ul class="flex">
+            <li>Brand</li>
+            <li>Marketing</li>
+            <li>Visual Design</li>
+            <li>UX Design</li>
+            <li>Product Design</li>
+            <li>Product/Experience Strategy</li>
+            <li>Web Development</li>
+            <li>Ecommerce</li>
+            <li>Fintech</li>
+            <li>Beauty & Lifestyle</li>
+            <li>D2C/B3B/B2C/B2B2C</li>
+          </ul>
         </div>
-      </div>
-      <div class="product-list">
-        <ul>
-          <li>Brand</li>
-          <li>Marketing</li>
-          <li>Visual Design</li>
-          <li>UX Design</li>
-          <li>Product Design</li>
-          <li>Product/Experience Strategy</li>
-          <li>Web Development</li>
-          <li>Ecommerce</li>
-          <li>Fintech</li>
-          <li>Beauty & Lifestyle</li>
-          <li>D2C/B3B/B2C/B2B2C</li>
-        </ul>
       </div>
     </footer>
-    <div id="cursor-trail"></div>
-  </div>
+    <div id="cursor-trail"></div> 
   
   </body>
   </html>
