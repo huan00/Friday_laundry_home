@@ -8,6 +8,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 24px;
   cursor: url('/assets/square2.png'), auto;
+  overflow: hidden;
 }
 
 /* Navbar */
@@ -53,11 +54,15 @@ body {
 /* Hero */
 
 .hero {
-  overflow: auto;
+  /* overflow: auto; */
+}
+
+.hero .flex {
+  overflow: visible;
 }
 
 .hero .container {
-  overflow: hidden;
+  /* overflow: auto; */
   height: 700px;
   position: relative;
 }
@@ -74,28 +79,39 @@ body {
 #outer-orbit {
   width: 30%;
   aspect-ratio: 1 / 2;
-  overflow: hidden;
 
   border: 1px solid black;
   border-radius: 50%;
-  z-index: 100;
-  
+
   position: absolute;
-  transform: translate(0, 0) rotate(55deg) skewY(-20deg);
+  /* transform: translate(0, 0) rotate(55deg) skewY(-20deg); */
+  animation: spin 3s linear infinite alternate-reverse;
 }
 
 #inner-orbit {
-  z-index: 100;
-
   width: 30%;
   aspect-ratio: 1 / 2;
   border: 1px solid black;
   border-radius: 50%;
   position: absolute;
 
-  transform: translate(0, 0) rotate(90deg) skewY(20deg);
+  /* transform: 
+  skewY(20deg); */
   overflow: visible;
+  animation: spin 3s linear infinite alternate;
 }
+
+@keyframes spin {
+  /* 30% {
+    transform: rotateX(360deg)
+  } */
+  100% {
+    transform: 
+    skewY(180deg) rotate(180deg)
+    /* perspective(1000px) */
+  }
+}
+
 
 /* Footer */
 footer {
@@ -109,6 +125,7 @@ footer .grid {
 
 .spin-labs {
   justify-self: flex-start;
+  cursor: pointer;
 }
 
 .spin-labs-circle {
