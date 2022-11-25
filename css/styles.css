@@ -120,7 +120,13 @@ a {
 
   100% {
     transform: 
-    skewY(180deg) rotate(180deg)
+    skewY(180deg) rotate(180deg);
+    --webkit-transform: 
+    skewY(180deg) rotate(180deg);
+    --moz-transform: 
+    skewY(180deg) rotate(180deg);
+    --ms-transform: 
+    skewY(180deg) rotate(180deg);
   }
 }
 
