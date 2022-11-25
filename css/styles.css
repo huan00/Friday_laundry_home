@@ -11,6 +11,15 @@ body {
   overflow: hidden;
 }
 
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
 /* Navbar */
 .navbar {
   font-size: 14px;
@@ -221,7 +230,7 @@ footer .grid {
 
 @media(max-width: 500px){
   .navbar-bus-desc {
-    font-size: 8px;
+    margin-top: 32px;
   }
 
   .hero .container {
@@ -248,8 +257,8 @@ footer .grid {
   }
 
   .product-list ul{
-    font-size: .5rem;
-    line-height: 14px;
+    /* font-size: .5rem; */
+    /* line-height: 14px; */
   }
 }
 
