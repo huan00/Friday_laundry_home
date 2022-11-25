@@ -55,6 +55,8 @@ body {
 
 .hero {
   /* overflow: auto; */
+  /* position: absolute; */
+  
 }
 
 .hero .flex {
@@ -63,8 +65,12 @@ body {
 
 .hero .container {
   /* overflow: auto; */
-  height: 700px;
-  position: relative;
+  /* height: 700px; */
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .title-name {
