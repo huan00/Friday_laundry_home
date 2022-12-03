@@ -1,3 +1,9 @@
+:root {
+  --xPos: calc(-900%) ;
+  --yPos: 250px;
+  --ballPOS: -14em;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +15,35 @@ body {
   line-height: 18px;
   cursor: url('/assets/square2.png'), auto;
   overflow: hidden;
+  min-height: 100vh;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 3em);
+  position: relative;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+div {transform-style: preserve-3d;}
+
+.floor {
+  background-image: linear-gradient(
+    45deg, 
+    #04619F 10%,
+  #000000);
+  position: absolute;
+  transform: 
+    rotateX(90deg);
+  
+  width: 8em;
+  height: 12em;
+  background-image: linear-gradient(
+    45deg, 
+    #04619F 10%,
+  #000000);
+  background-size:100% 10em 10em;
 }
 
 ul {
@@ -24,6 +59,9 @@ a {
 .navbar {
   font-size: 14px;
   height: 150px;
+  position: absolute;
+  top: 0;
+  color: white
 }
 
 .navbar .container {
@@ -64,77 +102,293 @@ a {
 }
 
 /* Hero */
-
-.hero {
-  /* overflow: auto; */
-  /* position: absolute; */
-  
+.main {
+  position: absolute;
+  text-transform: uppercase;
+  color: white;
+  height: 4em;
 }
 
-.hero .flex {
-  overflow: visible;
-}
-
-.hero .container {
-  /* overflow: auto; */
-  /* height: 700px; */
+.main .container {
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.title-name {
-  position: absolute;
-  font-size: 42px;
-}
-
-.title-name span {
-  font-weight: bold;
-}
-
-#outer-orbit {
-  width: 30%;
-  aspect-ratio: 1 / 2;
-
-  border: 1px solid black;
-  border-radius: 50%;
-
-  position: absolute;
-  animation: spin 10s linear infinite alternate-reverse;
-}
-
-#inner-orbit {
-  width: 30%;
-  aspect-ratio: 1 / 2;
-  border: 1px solid black;
-  border-radius: 50%;
-  position: absolute;
-
+  height: 5.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 1em;
   overflow: visible;
-  animation: spin 10s linear infinite alternate;
 }
 
-@keyframes spin {
+.main .container .letter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: color;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  padding: 11px;
+  background-color: #04619F;
+  font-size: .2em;
+  font-weight: 800;
+  overflow: hidden;
+  position: relative;
+  top: var(--ballPOS);
+  
+  background-image: radial-gradient(circle at top, lightblue 10%, #000 80%);
+  box-shadow: 0 0 0.5em #000a;
+  transform-style: preserve-3d;
+}
 
-  100% {
-    transform: 
-    skewY(180deg) rotate(180deg);
-    -webkit-transform: 
-    skewY(180deg) rotate(180deg);
-    -moz-transform: 
-    skewY(180deg) rotate(180deg);
-    -ms-transform: 
-    skewY(180deg) rotate(180deg);
+.main .container .letter:first-child{
+  color: black;
+  animation: roll 5s linear forwards;
+}
+
+.main .container .letter:nth-child(2){
+  color: black;
+  animation: roll2 5s linear forwards;
+}
+
+.main .container .letter:nth-child(3){
+  color: black;
+  animation: roll3 5s linear forwards;
+}
+
+.main .container .letter:nth-child(4){
+  color: black;
+  animation: roll4 5s linear forwards;
+}
+
+.main .container .letter:nth-child(5){
+  color: black;
+  animation: roll5 5s linear forwards;
+}
+
+.main .container .letter:nth-child(6){
+  color: black;
+  animation: roll6 5s linear forwards;
+}
+
+.main .container .letter:nth-child(7){
+  color: black;
+  animation: roll7 5s linear forwards;
+}
+
+.main .container .letter:nth-child(8){
+  color: black;
+  animation: roll8 5s linear forwards;
+}
+
+.main .container .letter:nth-child(9){
+  color: black;
+  animation: roll9 5s linear forwards;
+}
+
+.main .container .letter:nth-child(10){
+  color: black;
+  animation: roll10 5s linear forwards;
+}
+
+.main .container .letter:nth-child(11){
+  color: black;
+  animation: roll11 5s linear forwards;
+}
+
+.main .container .letter:nth-child(12){
+  color: black;
+  animation: roll12 5s linear forwards;
+}
+
+.main .container .letter:nth-child(13){
+  color: black;
+  animation: roll13 5s linear forwards;
+}
+
+@keyframes roll {
+  0%   {transform: translate(0)}
+  25%  {transform: translate3d(100px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(var(--xPos), var(--yPos), 0) scale(2)}
+}
+
+@keyframes roll2 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(200px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(300px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos) + 30px), 250px, 0) scale(2)
   }
 }
+
+@keyframes roll3 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(50px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(350px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos) + 60px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll4 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(0px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos) + 90px), 250px, 0) scale(2)
+  }
+}
+
+
+@keyframes roll5 {
+  0%   {transform: translate(0)}
+  25%  {transform: translate3d(200px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(400px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 120px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll6 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-100px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(-150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 150px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll7 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-150px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(-50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(250px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 210px), 250px, 0) scale(2)
+  }
+}
+
+
+@keyframes roll8 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-200px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(-150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 240px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll9 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-100px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(100px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(-250px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 270px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll10 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-250px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(50px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(-150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 300px), 250px, 0) scale(2)
+  }
+}
+
+
+@keyframes roll11 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-200px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(-200px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(-200px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 330px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll12 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-170px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(-150px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(150px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 360px), 250px, 0) scale(2)
+  }
+}
+
+@keyframes roll13 {
+  0% {transform: translate(0)}
+  25%  {transform: translate3d(-220px, calc(var(--yPos) - 200px), 0) scale(1.25)}
+  50%  {transform: translate3d(-190px, calc(var(--yPos) - 150px), 0) scale(1.5)}
+  75%  {transform: translate3d(50px, calc(var(--yPos) - 100px), 0) scale(1.75)}
+  100% {transform: translate3d(calc(var(--xPos)+ 390px), 250px, 0) scale(2)
+  }
+}
+
+.main .container .letter::before {
+  content:'';
+  position:absolute;
+  top: 0em;
+  left: 0em;
+  height: 100%;
+  width: 100%;
+  /* background:transparent; */
+  background-image: url("https://www.transparenttextures.com/patterns/starring.png");
+  border-radius: 50%;
+  background-size:cover;
+  /* transition: 3s; */
+  animation: bg 5s linear forwards;
+}
+
+@keyframes bg {
+
+    0%{background-position:  50px 0px;}
+    10%{background-position: 120px -150px;}
+    20%{background-position: 170px -300px;}
+    30%{background-position: 220px -450px;}
+    40%{background-position: 270px -600px;}
+    50%{background-position: 320px -750px;}
+    60%{background-position: 370px -800px;}
+    70%{background-position: 420px -950px;}
+    80%{background-position: 470px -1000px;}
+    90%{background-position: 520px -1050px;}
+    100%{background-position: 570px 0px;}
+  }
+
+  .main .container .letter div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: letter 5s linear alternate;
+    overflow: hidden;
+  }
+
+  @keyframes letter {
+    0%  { top: 50px; left: 0;}
+    10% { top: 120px; left: -150px;}
+    20% { top: 170px; left: -300px;}
+    30% { top: 220px; left: -450px;}
+    40% { top: 270px; left: -600px;}
+    50% { top: 320px; left: -750px;}
+    60% { top: 370px; left: -800px;}
+    70% { top: 420px; left: -950px;}
+    80% { top: 470px; left: -1000px;}
+    90% { top: 520px; left: -1050px;}
+    100%{ top: 50%; left: 50%;}
+  }
+
 
 
 /* Footer */
 footer {
   position: absolute;
   bottom: 0;
+  color: white;
+  font-size: 14px;
 }
 
 footer .grid {
